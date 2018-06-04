@@ -11,3 +11,9 @@ module.exports = function(app){
 }
 
 
+// i think i need a post request here or in my html that will be on the modal
+// app.post("api/friends", function(req, res){
+
+// })
+
+
