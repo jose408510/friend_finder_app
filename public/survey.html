@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <title>Document</title>
 </head>
@@ -25,52 +26,52 @@
         <strong>Question 1</strong>
     </h3>
     <h4>You should be able to pay for this class with bitcoin?</h4>
-    <input type="radio" name="answer" id="answer1"> 1 Strongly Disagree 
-    <input type="radio" name="answer" id=""> 2 Disagree
-    <input type="radio" name="answer" id=""> 3 Neutral
-    <input type="radio" name="answer" id=""> 4 Agree
-    <input type="radio" name="answer" id=""> 5 Stronly Agree
+    <input type="radio" name="answer" id="q1"> 1 Strongly Disagree 
+    <input type="radio" name="answer" id="q1"> 2 Disagree
+    <input type="radio" name="answer" id="q1"> 3 Neutral
+    <input type="radio" name="answer" id="q1"> 4 Agree
+    <input type="radio" name="answer" id="q1"> 5 Stronly Agree
 
         <h3>
             <strong>Question 2</strong>
         </h3>
         <h4>You could make me an app  ?</h4>
-        <input type="radio" name="answer2" id="answer1"> 1 Strongly Disagree 
-        <input type="radio" name="answer2" id="answer2">2 Disagree
-        <input type="radio" name="answer2" id="answer3">3 Neutral
-        <input type="radio" name="answer2" id="answer4">4 Agree
-        <input type="radio" name="answer2" id="answer5">5 Stronly Agree
+        <input type="radio" name="answer2" id="q2"> 1 Strongly Disagree 
+        <input type="radio" name="answer2" id="q2">2 Disagree
+        <input type="radio" name="answer2" id="q2">3 Neutral
+        <input type="radio" name="answer2" id="q2">4 Agree
+        <input type="radio" name="answer2" id="q2">5 Stronly Agree
 
         <h3>
             <strong>Question 3</strong>
         </h3>
             
             <h4>You could Knock out Mike Tyson ?</h4>
-            <input type="radio" name="answer3" id="answer6"> 1 Strongly Disagree 
-            <input type="radio" name="answer3" id="answer7">2 Disagree
-            <input type="radio" name="answer3" id="answer8">3 Neutral
-            <input type="radio" name="answer3" id="answer9">4 Agree
-            <input type="radio" name="answer3" id="answer10"> 5 Stronly Agree
+            <input type="radio" name="answer3" id="q3"> 1 Strongly Disagree 
+            <input type="radio" name="answer3" id="q3">2 Disagree
+            <input type="radio" name="answer3" id="q3">3 Neutral
+            <input type="radio" name="answer3" id="q3">4 Agree
+            <input type="radio" name="answer3" id="q3"> 5 Stronly Agree
         <h3>
             <strong>Question 4</strong>
         </h3>
             
             <h4>The President has done a horrible job ?</h4>
-            <input type="radio" name="answer4" id="answer11">1 Strongly Disagree 
-            <input type="radio" name="answer4" id="answer12">2 Disagree 
-            <input type="radio" name="answer4" id="answer13">3 Neutral
-            <input type="radio" name="answer4" id="answer14">4 Agree
-            <input type="radio" name="answer4" id="answer">5 Stronly Agree
+            <input type="radio" name="answer4" id="q4">1 Strongly Disagree 
+            <input type="radio" name="answer4" id="q4">2 Disagree 
+            <input type="radio" name="answer4" id="q4">3 Neutral
+            <input type="radio" name="answer4" id="q4">4 Agree
+            <input type="radio" name="answer4" id="q4">5 Stronly Agree
         <h3>
             <strong>Question 5</strong>
         </h3>
             
             <h4>The warriros are going to sweep in the NBA finals ?</h4>
-            <input type="radio" name="answer5" id="answer">1 Strongly Disagree 
-            <input type="radio" name="answer5" id="answer">2 Disagree 
-            <input type="radio" name="answer5" id="answer">3 Neutral
-            <input type="radio" name="answer5" id="answer">4 Agree
-            <input type="radio" name="answer5" id="answer">5 Stronly Agree
+            <input type="radio" name="answer5" id="q5">1 Strongly Disagree 
+            <input type="radio" name="answer5" id="q5">2 Disagree 
+            <input type="radio" name="answer5" id="q5">3 Neutral
+            <input type="radio" name="answer5" id="q5">4 Agree
+            <input type="radio" name="answer5" id="q5">5 Stronly Agree
         <br>
         <br>
         <!-- line break to have space between the submit button -->
@@ -88,12 +89,48 @@
                 </div>
         </footer>
 </div>
+
+<a class="btn" data-toggle="modal" href="#survey">Launch Modal</a>
+
+
+<div class="modal hide" id="myModal"><!-- note the use of "hide" class -->
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a><!-- note the use of "data-dismiss" -->
+    <a href="#" class="btn btn-primary">Save changes</a>
+  </div>
+</div>​
+
 <script type=text/javascript>
 
-    document.addEventListener("click", function(){
-   
-        document.getElementById("#surveySubmit").innerHTML = "Hello World" 
+    $(document).ready(function(){
+
+    $("#surveySubmit").on('click', function(){
+        event.preventDefault();
+        console.log("you have been hit")
+    })    
 });
+
+        $('#myModal').on('click', function () {
+        $('#myInput').show('#myModal')
+})
+
+
+// creating an object with all the users info
+var userdata = {
+    name: $("name").val(),
+    photo: $("photo").val(),
+    scores:[
+
+    ]
+}
+
 </script>
 
 </body>
