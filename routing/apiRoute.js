@@ -16,4 +16,14 @@ module.exports = function(app){
 
 // })
 
+// app.post("/api/friends", function(req, res) {
+//           // Send back the ID of the new todo
+//       res.json({ id: result.insertId });
+
+//       console.log({ id: result.insertId });
+   
+//     });
+
+  
+
 
