@@ -222,11 +222,12 @@ console.log(userdata);
 //Grabs current URL of website
 var currentURL = window.location.origin;
 		//AJAX posts the data to friends API.
-		$.post(currentURL + "/api/friends", friendsList, function(data) {
+		$.post(currentURL + "/api/friends", userdata, function(app) {
 			//Grab the result from the AJAX post so that the best match's name and photo are displayed.
 			$("#nameFriends").text(data.name);
 			$("#photoFriends").attr("src", data.photo);
 
+                // console.log(data.name);
         });
 
 
