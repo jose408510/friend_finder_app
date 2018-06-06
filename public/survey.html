@@ -156,9 +156,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-
-                    <p id="nameFriends"></p>
-                    <div id="photoFriends"></div>
+                    <h2 id="nameFriends"></h2>
+                    <img id="photoFriends" src="#" alt="">
 
                 </div>
                 <div class="modal-footer">
@@ -169,9 +168,6 @@
     </div>
 
     <script type=text/javascript>
-
-
-
 
     $(document).ready(function(){
 
@@ -203,8 +199,8 @@
     }
 
 var userdata = {
-    name: $("#name").val(),
-    photo: $("#photo").val(),
+    name: $("#name").val().trim(),
+    photo: $("#photo").val().trim(),
     scores:[
         $('input[name=answer]:checked').val(),
         $('input[name=answer2]:checked').val(),
@@ -222,33 +218,31 @@ var userdata = {
 
 console.log(userdata);
 
+
+//Grabs current URL of website
+var currentURL = window.location.origin;
+		//AJAX posts the data to friends API.
+		$.post(currentURL + "/api/friends", friendsList, function(data) {
+			//Grab the result from the AJAX post so that the best match's name and photo are displayed.
+			$("#nameFriends").text(data.name);
+			$("#photoFriends").attr("src", data.photo);
+
         });
 
 
 
-    // });
+
+
+
+
+
+    });
+
+
+
+
 });
 
-
-
-
-             // Form validation
-    //   function validateForm() {
-    //     var isValid = true;
-    //     $(".form-control").each(function() {
-    //       if ($(this).val() === "") {
-    //         isValid = false;
-    //       }
-    //     });
-
-    //     $(".chosen-select").each(function() {
-
-    //       if ($(this).val() === "") {
-    //         isValid = false;
-    //       }
-    //     });
-    //     return isValid;
-    //   }
 
 // var newAmigo = {
 //     name:
