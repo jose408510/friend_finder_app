@@ -130,7 +130,7 @@
         <br>
         <br>
         <!-- line break to have space between the submit button -->
-        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal" id="sub">Submit</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block"id="sub">Submit</button>
 
         <hr>
         <footer>
@@ -146,7 +146,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="myModal" data-toggle="modal" data-target="#exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -157,7 +157,7 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="nameFriends"></h2>
-                    <img id="photoFriends" src="#" alt="">
+                    <img id="photoFriends" src="" alt="">
 
                 </div>
                 <div class="modal-footer">
@@ -174,7 +174,7 @@
         $('#sub').click(function(event){
             event.preventDefault();
 
-    var checkAnswer = [
+            var checkAnswer = [
         $('input[name=answer]:checked').val(),
         $('input[name=answer2]:checked').val(),
         $('input[name=answer3]:checked').val(),
@@ -196,6 +196,8 @@
         alert("Photo input blank, please insert photo!");
     }else if(checkAnswer[0,1,2,3,4,5,6,7,8,9] == null){
         alert("You must answer all questions to be Matched!");
+    }else{
+        $('#myModal').modal();
     }
 
 var userdata = {
@@ -222,19 +224,12 @@ console.log(userdata);
 //Grabs current URL of website
 var currentURL = window.location.origin;
 		//AJAX posts the data to friends API.
-		$.post(currentURL + "/api/friends", userdata, function(app) {
+		$.post(currentURL + "/api/friends", userdata, function(data) {
 			//Grab the result from the AJAX post so that the best match's name and photo are displayed.
 			$("#nameFriends").text(data.name);
 			$("#photoFriends").attr("src", data.photo);
-
-                // console.log(data.name);
+        
         });
-
-
-
-
-
-
 
 
     });
@@ -243,13 +238,6 @@ var currentURL = window.location.origin;
 
 
 });
-
-
-// var newAmigo = {
-//     name:
-//     photo:
-//     scores:
-// }
 
 </script>
 
