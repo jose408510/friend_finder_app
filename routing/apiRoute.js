@@ -13,17 +13,13 @@ module.exports = function(app){
         // Send back the ID of the new todo
         console.log(req.body);
 
-        // need logic to compare both 
-        // then res json info back 
- 
+    
+
+        res.json(friendsList.friendsList[0]);
   });
 }
 
- 
-// i think i need a post request here or in my html that will be on the modal
-// app.post("api/friends", function(req, res){
 
-// })
 
 
 
