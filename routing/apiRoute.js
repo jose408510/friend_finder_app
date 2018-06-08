@@ -13,7 +13,6 @@ module.exports = function(app){
         // Send back the ID of the new todo
         console.log(req.body);
 
-    
 
         res.json(friendsList.friendsList[0]);
   });
